@@ -1,13 +1,208 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,body{
+    width: 100%;
+    height: 100%;
 }
+
+
+.Products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    padding: 20px;
+    background-color: blueviolet;
+
+}
+
+.input{
+    margin-top : 20px ;
+}
+
+input{
+    height: 20px;
+    width: 200px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: green;
+}
+
+h2{
+    color: white;
+}
+
+.containerDis{
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    border: 1px solid;
+}
+
+.containerDis button{
+    margin-top: 0;
+}
+
+.containerdis2{
+    display: flex;
+    border: 1px solid;
+    padding-left: 20px;
+}
+
+.displayProd{   
+    width:300px;
+    padding: 20px;
+}
+
+img{
+    width: 200px;
+}
+
+.custom-dropdown{
+ position: relative;
+ display: inline-block;   
+ cursor: pointer;
+}
+
+.selected-option{
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.options{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out,transform 0.3s ease-in-out;
+    transform-origin: top;
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+.options.open {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.option{
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.option:hover{
+    background-color: #f0f0f0;
+}
+
+.selected-option.show{
+    background-color: #fff;
+    color: black;
+}
+
+.about {
+    transform: translate(0,100);
+
+}
+
+.carousel-container {
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    height: 500px; /* Fixed height for the carousel container */
+    overflow: hidden; /* Ensure content overflows are hidden */
+  }
+  
+  .carousel-item {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  /* Styles for the arrows and dots */
+  .slick-prev,
+  .slick-next {
+    font-size: 18px;
+    line-height: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slick-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 5px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  .slick-dot.slick-active {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
