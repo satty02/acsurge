@@ -1,9 +1,9 @@
-import Products from './Components/Products';
+// import Products from './Components/Products';
 import ProductList from './Components/Products&Services/ProductList';
 import Services from './Components/Products&Services/Services';
 import System from './Components/Products&Services/System';
 import Contact from './Components/contact/Contact';
-import Courousel from './Components/mainPage/Courousel';
+// import Courousel from './Components/mainPage/Courousel';
 import FrontPage from './Components/mainPage/FrontPage';
 import { BrowserRouter as Router , Routes , Route} from 'react-router-dom';
 import OurClients from './Components/mainPage/OutClients';
